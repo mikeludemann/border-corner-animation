@@ -1,0 +1,94 @@
+body {
+	background-color: #000;
+}
+
+.border--corner--animation {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	background: none;
+	cursor: pointer;
+	color: white;
+	padding: 0;
+	box-sizing: content-box;
+	border: 2px solid transparent;
+}
+
+.content > div {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.border--corner--animation::before,
+.border--corner--animation::after,
+.content::before,
+.content::after {
+	display: block;
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+}
+
+.border--corner--animation::before {
+	top: 2px;
+	left: 2px;
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	transition: 0.5s all;
+}
+
+.border--corner--animation::after {
+	top: 2px;
+	right: 2px;
+	border-top: 2px solid white;
+	border-right: 2px solid white;
+	transition: 0.5s all;
+}
+
+.content::before {
+	bottom: 2px;
+	left: 2px;
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+	transition: 0.5s all;
+}
+
+.content::after {
+	bottom: 2px;
+	right: 2px;
+	border-bottom: 2px solid white;
+	border-right: 2px solid white;
+	transition: 0.5s all;
+}
+
+.border--corner--animation:hover::before,
+.border--corner--animation:hover::after {
+	width: 40px;
+	height: 40px;
+	border-color: #00e800;
+}
+
+.border--corner--animation:hover .content::before,
+.border--corner--animation:hover .content::after {
+	width: 40px;
+	height: 40px;
+	border-color: #00e800;
+}
+
+.border--corner--raute--animation:hover::before,
+.border--corner--raute--animation:hover::after {
+	width: 40px;
+	height: 40px;
+	border-color: #00e800;
+}
+
+.border--corner--raute--animation:hover .content::before,
+.border--corner--raute--animation:hover .content::after {
+	width: 40px;
+	height: 40px;
+	border-color: #00e800;
+}
